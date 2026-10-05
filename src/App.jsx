@@ -28,6 +28,7 @@ import ProductDetails from "./pages/Products/productDetails";
 import AddRAMS from "./pages/Products/addRAMS";
 import AddWeight from "./pages/Products/addWeight";
 import AddSize from "./pages/Products/addSize";
+import ErrorPage from "./Error/Error";
 
 export const MyContext = createContext();
 
@@ -185,6 +186,7 @@ function App() {
   { path: "/sign-up", element: <SignUp /> },
   { path: "/forgot-password", element: <ForgotPassword /> },
   { path: "/change-password", element: <ChangePassword /> },
+  { path: "/*", element: <ErrorPage/> },
   { path: "/profile", element: withLayout(Profile) },
   { path: "/products", element: withLayout(Products) },
   { path: "/product/:id", element: withLayout(ProductDetails) },
@@ -197,7 +199,10 @@ function App() {
   { path: "/SubCategory/list", element: withLayout(SubCategoryList) },
   { path: "/users", element: withLayout(Users) },
   { path: "/orders", element: withLayout(Orders) },
+  
 ]);
+
+
 
 
   return (
