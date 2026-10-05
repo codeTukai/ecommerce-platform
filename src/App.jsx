@@ -28,7 +28,7 @@ import ProductDetails from "./pages/Products/productDetails";
 import AddRAMS from "./pages/Products/addRAMS";
 import AddWeight from "./pages/Products/addWeight";
 import AddSize from "./pages/Products/addSize";
-import ErrorPage from "./Error/Error";
+import ErrorPage from "./Error";
 
 export const MyContext = createContext();
 
