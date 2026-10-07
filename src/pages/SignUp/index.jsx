@@ -59,11 +59,17 @@ const SignUp = () => {
 
     setIsLoading(true);
 
+    // setInterval(() => {
+      
+    //   console.log("time pass");
+      
+    // }, 1000);
+
     postData("/api/user/register", formFields).then((res) => {
       setIsLoading(false);
       if (res?.error !== true) {
         showAlert("success", res?.message || "Registered successfully");
-        localStorage.setItem("userEmail", formFields.email);
+        // localStorage.setItem("userEmail", formFields.email);
         setFormFields({ name: "", email: "", password: "" });
         navigate("/verify");
       } else {
